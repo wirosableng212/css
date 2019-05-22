@@ -1037,3 +1037,5 @@ div.postify-image img {
 .showpageOf {
     display: none;
 }
+.demo-box{text-align: center;margin-top: 3em;}.demo-box a{text-align: center;padding: 10px 20px;background: #1db954;font-size: 15px;color: #fff;border-radius: 3px;box-shadow: 0 3px 10px rgba(0,0,0,0.2);display:inline-block;margin-bottom:2em;margin:auto 10px}
+.demo-box a:hover{background:#222;color:#fff;}
