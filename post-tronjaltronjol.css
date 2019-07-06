@@ -1,0 +1,59 @@
+.row > div > div{
+	position:relative;
+	top:150px;
+	padding-top:22px;
+	box-shadow:0px 0px 5px 0px #bdc3c7;
+}
+
+.posts nav ul{
+	box-shadow:0px 0px 5px 0px #bdc3c7 inset;
+	text-align:left;
+	text-transform:uppercase;
+	text-decoration:none;
+	word-wrap:normal;
+	padding-left:10px;
+	padding-top:7px;
+	padding-bottom:7px;
+}
+
+.posts main article > div > div{
+	box-shadow:0px 0px 5px 0px #bdc3c7 inset;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:15px;
+	padding-bottom:10px;
+	margin-bottom:20px;
+}
+
+.posts main h1{
+	background-color:rgb(0,104,101);
+	color:#ecf0f1;
+	padding-left:10px;
+	box-shadow:0px 0px 5px 0px #bdc3c7;
+}
+
+.posts main .post-meta{
+	box-shadow:0px 0px 5px 0px #bdc3c7 inset;
+	padding-left:5px;
+}
+
+.posts div h3{
+	background-color:rgb(0,104,101);
+	color:#ecf0f1;
+	text-align:center;
+}
+
+.sidebar{
+	box-shadow:0px 0px 5px 0px #bdc3c7 inset;
+}
+
+.row div header{
+	box-shadow:0px 0px 5px 0px #bdc3c7;
+	box-sizing:content-box;
+}
+
+.posts div ul{
+	box-shadow:0px 0px 5px 0px #bdc3c7 inset;
+	padding-left:10px;
+	padding-top:10px;
+}
