@@ -558,4 +558,14 @@ h1 {
     height: 13em;
 } 
 }
+  .button {
+    background-color: #e5593d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+  }
 /*-- //responsive-design --*/
