@@ -1,37 +1,83 @@
-$bubbles: ();
-$move: ();
-@for $i from 0 through 10 {
-    $size: random(50, 120) / 100 * 1em;
-    $start-x: random(-10, 110) * 1%;
-    $start-y: random(80, 150) * 1%;
-    $end-x: $start-x + random(-10, 10);
-    $end-y: random(-400, 60) * 1%;
-    $bubbles: append($bubbles, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) $start-x $start-y / #{$size} #{$size}, comma);
-    $move: append($move, $end-x $end-y, comma);
+.buttonDownload {
+	display: inline-block;
+	position: relative;
+	padding: 10px 25px;
+  
+	background-color: #4CC713;
+	color: white;
+  
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 0.9em;
+	text-align: center;
+	text-indent: 15px;
 }
 
-.btn-bubble {
-    color: white;
-    background-color: #77b11c;
-    background-repeat: no-repeat;
-    &:hover,
-    &:focus {
-        animation: bubbles 1s forwards ease-out;
-        background: $bubbles;
-        background-color: #77b11c;
-        background-repeat: no-repeat;
-    }
+.buttonDownload:hover {
+	background-color: #333;
+	color: white;
 }
 
-@keyframes bubbles {
-    100% {
-        background-position: $move;
-        box-shadow: inset 0 -6.5em 0 #0072c4;
-    }
+.buttonDownload:before, .buttonDownload:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
 }
 
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    padding: 1em 2em;
+/* Download box shape  */
+.buttonDownload:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+.buttonDownload:after {
+	width: 0;
+	height: 0;
+	margin-left: 3px;
+	margin-top: -7px;
+  
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	
+	animation: downloadArrow 2s linear infinite;
+	animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+	border-color: #4CC713;
+}
+
+.buttonDownload:hover:after {
+	border-top-color: #4CC713;
+	animation-play-state: running;
+}
+
+/* keyframes for the download icon anim */
+@keyframes downloadArrow {
+	/* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+	
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
 }
